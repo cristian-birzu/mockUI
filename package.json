@@ -1,0 +1,24 @@
+{
+  "name": "mockui",
+  "version": "1.0.0",
+  "description": "Static responsive website built with pug template, html and css only",
+  "main": "main.js",
+  "scripts": {
+    "pug:dist": "pug --pretty --out dist app/index.pug",
+    "sync": "browser-sync start --proxy localhost:3030  --files \"./app\" --browser \"Opera\"",
+    "start": "node main | npm run sync",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "pug",
+    "npm"
+  ],
+  "author": "Cristian Birzu",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "express": "^4.15.2",
+    "pug": "^2.0.0-beta11"
+  }
+}

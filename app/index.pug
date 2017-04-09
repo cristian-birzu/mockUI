@@ -1,0 +1,40 @@
+
+doctype html
+html
+    head
+
+        //--SEO meta properties
+        meta(name="author", content="Cristian Birzu")
+        meta(name="keywords", content="static, responsive, website, html")
+
+        //--css meta properties
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width/10")
+
+        title MockUI | Welcome
+        link(rel="stylesheet", href="./css/style.css")
+    body
+
+        //-- home anchor with header area
+                            
+        //-- end header area
+
+        //-- includes the home section
+        section#home.page-section
+            include views/home.pug
+    
+        //-- about anchor
+        section#about.page-section
+
+            //-- includes the about section
+            include views/about.pug
+            
+        //-- services anchor
+        section#services.page-section
+           
+            //-- includes the services section
+            include views/services.pug
+            
+        footer
+            p
+                | MockUI, Copyright &copy; 2017
