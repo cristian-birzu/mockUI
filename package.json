@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "pug:dist": "pug --pretty --out dist app/index.pug",
-    "sync": "browser-sync start --proxy localhost:3030  --files \"./app\" --browser \"Opera\"",
+    "sync": "browser-sync start --proxy localhost:3030  --files \"./app\"",
     "start": "node main | npm run sync",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

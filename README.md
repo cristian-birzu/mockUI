@@ -20,15 +20,16 @@ otherwise you can just use npm as the package manager.
 The website
 
 Steps for viewing this static website: 
+  
   1 - download/clone the repository
   2 - install the required dependencies 
   
-      Installation with yarn : 
-      This will install the pug package but it will also read the package.json file and will install every other declared dependency.
+    Installation with yarn : 
+    This will install the pug package but it will also read the package.json file and will install every other declared dependency.
       
       yarn add pug 
 
-      Installation with npm : 
+    Installation with npm : 
       
       npm install
       
