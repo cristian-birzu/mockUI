@@ -9,17 +9,23 @@ app.set('views', __dirname + '\\app\\views');
 
 app.get(['/', '/home'], function (req, res) {
     
-    res.render('home');
+    let view = 'home';
+    let title = 'Welcome';
+    res.render(view, {view, title});
 });
 
 app.get('/about', function (req, res) {
 
-    res.render('about');
+    let view = 'about';
+    let title = 'About';
+    res.render(view, { view, title });
 });
 
 app.get('/services', function (req, res) {
 
-    res.render('services');
+    let view = 'services';
+    let title = 'Services';
+    res.render(view, { view, title });
 });
 
 /*

@@ -1,4 +1,17 @@
 
+//-- condition to display the showcase section
+- let hideShowcase = !(view === 'home')
+
+//-- menuItem mixin
+mixin menuItem(url, view)
+            
+    if url === view
+        li.active
+            a(href= url) #{url}
+    else
+        li
+            a(href= url) #{url}
+                
 doctype html
 html
     head
@@ -9,14 +22,51 @@ html
 
         //--css meta properties
         meta(charset="utf-8")
-        meta(name="viewport", content="width=device-width/10")
+        meta(name="viewport", content="width=device-width")
 
-        title MockUI | Welcome
+        title MockUI | #{title}
         link(rel="stylesheet", href="./css/style.css")
+
     body
 
         //-- page header
-        block pageHeader
+        header
+            div.container
+            
+                div#branding
+                    h1 Mock
+                        span UI
+                nav
+                    ul
+                        +menuItem('home', view)
+                        +menuItem('about', view)
+                        +menuItem('services', view)
+                        
+        //-- showcase area
+        if !hideShowcase
+            section#showcase
+        else
+            section#showcase(style="display: none;")
+
+                div.container
+
+                    h1
+                        | Static responsive website
+                    p
+                        | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed blandit odio, eu varius quam. Maecenas lobortis elementum lorem ut tempor. Nam pulvinar non odio ut dignissim.
+
+        //-- newsletter area
+        section#newsletter
+            div.container
+
+                h1
+                    | Subscribe to our newsletter
+
+                form
+                    input(type="email", placeholder="Enter Email...")
+                    button.button_1(type="submit")
+                        | Subscribe
+
 
         //-- page content
         section.page-section

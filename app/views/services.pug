@@ -1,39 +1,7 @@
 
 extends ../layout
 
-block pageHeader
-
-    //-- services section content
-    header#home
-                div.container
-                
-                    div#branding
-                        h1 
-                            | Mock
-                            span UI
-                    nav
-                        ul
-                            li
-                                a(href="/home")
-                                    | Home
-                            li
-                                a(href="/about")
-                                    | About
-                            li.active
-                                a(href="/services")
-                                    | Services
-    //-- newsletter area
-    section#newsletter
-        div.container
-
-            h1
-                | Subscribe to our newsletter
-
-            form
-                input(type="email", placeholder="Enter Email...")
-                button.button_1(type="submit")
-                    | Subscribe
-
+//-- services section content
 block pageContent
 
     //-- boxes section
