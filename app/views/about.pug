@@ -1,51 +1,57 @@
 
+extends ../layout
+
 //-- about section content
-header#home
-            div.container
-            
-                div#branding
-                    h1 Mock
-                        span UI
-                nav
-                    ul
-                        li
-                            a(href="#home")
-                                | Home
-                        li.active
-                            a(href="#about")
-                                | About
-                        li
-                            a(href="#services")
-                                | Services
-//-- newsletter area
-section#newsletter
-    div.container
+block pageHeader
+    header#home
+                div.container
+                
+                    div#branding
+                        h1 Mock
+                            span UI
+                    nav
+                        ul
+                            li
+                                a(href="/home")
+                                    | Home
+                            li.active
+                                a(href="/about")
+                                    | About
+                            li
+                                a(href="/services")
+                                    | Services
+    //-- newsletter area
+    section#newsletter
+        div.container
 
-        h1
-            | Subscribe to our newsletter
+            h1
+                | Subscribe to our newsletter
 
-        form
-            input(type="email", placeholder="Enter Email...")
-            button.button_1(type="submit")
-                | Subscribe
+            form
+                input(type="email", placeholder="Enter Email...")
+                button.button_1(type="submit")
+                    | Subscribe
 
-//-- main section
-section#main
-    div.container
+block pageContent
 
-        article#main-col
-            h1.page-title
-                | About Us
-            
-            p
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed blandit odio, eu varius quam. Maecenas lobortis elementum lorem ut tempor. Nam pulvinar non odio ut dignissim. Quisque vel dolor ac libero volutpat ultricies ac eget lectus. Donec at justo non leo pharetra bibendum nec non nibh. Donec vehicula blandit suscipit. Cras viverra varius neque eu fermentum. Integer aliquam libero sit amet maximus volutpat. Curabitur consectetur leo ut varius bibendum. Aenean quam neque, posuere vitae odio et, gravida mattis felis. Praesent quis dignissim ligula.
+    //-- main section
+    section#main
+        div.container
 
-            p.dark
-                | Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tristique suscipit tellus, id feugiat libero pulvinar at. Nunc enim massa, congue id ante sed, sagittis tristique libero. Nullam ac auctor velit. Donec molestie a ligula sit amet feugiat. Aenean varius tellus a porttitor ullamcorper. Aenean velit lectus, feugiat luctus vulputate eu, vestibulum ac nisl. Etiam ultrices tortor commodo magna sagittis consequat. Praesent eget elementum mauris. Etiam bibendum posuere nulla, sit amet aliquet ligula ornare convallis. Donec tempus magna eu enim semper aliquet. Duis a aliquam nisl. Integer magna ex, auctor at ullamcorper porta, eleifend at nulla.
-
-        aside#sidebar
-            div.dark
-                h3
-                    | What we do
+            article#main-col
+                h1.page-title
+                    | About Us
+                
                 p
-                    | Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tristique suscipit tellus, id feugiat libero pulvinar at.
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed blandit odio, eu varius quam. Maecenas lobortis elementum lorem ut tempor. Nam pulvinar non odio ut dignissim. Quisque vel dolor ac libero volutpat ultricies ac eget lectus. Donec at justo non leo pharetra bibendum nec non nibh. Donec vehicula blandit suscipit. Cras viverra varius neque eu fermentum. Integer aliquam libero sit amet maximus volutpat. Curabitur consectetur leo ut varius bibendum. Aenean quam neque, posuere vitae odio et, gravida mattis felis. Praesent quis dignissim ligula.
+
+                p.dark
+                    | Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tristique suscipit tellus, id feugiat libero pulvinar at. Nunc enim massa, congue id ante sed, sagittis tristique libero. Nullam ac auctor velit. Donec molestie a ligula sit amet feugiat. Aenean varius tellus a porttitor ullamcorper. Aenean velit lectus, feugiat luctus vulputate eu, vestibulum ac nisl. Etiam ultrices tortor commodo magna sagittis consequat. Praesent eget elementum mauris. Etiam bibendum posuere nulla, sit amet aliquet ligula ornare convallis. Donec tempus magna eu enim semper aliquet. Duis a aliquam nisl. Integer magna ex, auctor at ullamcorper porta, eleifend at nulla.
+
+            aside#sidebar
+                div.dark
+                    h3
+                        | What we do
+                    p
+                        | Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tristique suscipit tellus, id feugiat libero pulvinar at.
+

@@ -15,24 +15,23 @@ html
         link(rel="stylesheet", href="./css/style.css")
     body
 
-        //-- home anchor with header area
-                            
-        //-- end header area
+        //-- page header
+        block pageHeader
+
+        //-- page content
+        section.page-section
+            block pageContent
 
         //-- includes the home section
-        section#home.page-section
+        //--section#home.page-section
             include views/home.pug
     
-        //-- about anchor
-        section#about.page-section
-
-            //-- includes the about section
+        //-- includes the about section
+        //--section#about.page-section
             include views/about.pug
             
-        //-- services anchor
-        section#services.page-section
-           
-            //-- includes the services section
+        //-- includes the services section
+        //--section#services.page-section
             include views/services.pug
             
         footer

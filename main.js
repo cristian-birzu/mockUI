@@ -5,11 +5,21 @@ var PORT = 3030;
 
 app.use(express.static(__dirname + '\\app'));
 app.set('view engine', 'pug');
-app.set('views', __dirname + '\\app');
+app.set('views', __dirname + '\\app\\views');
 
-app.get('/', function (req, res) {
+app.get(['/', '/home'], function (req, res) {
     
-    res.render('index');
+    res.render('home');
+});
+
+app.get('/about', function (req, res) {
+
+    res.render('about');
+});
+
+app.get('/services', function (req, res) {
+
+    res.render('services');
 });
 
 /*

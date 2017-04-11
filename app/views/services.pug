@@ -1,89 +1,95 @@
 
-//-- services section content
-header#home
-            div.container
-            
-                div#branding
-                    h1 
-                        | Mock
-                        span UI
-                nav
-                    ul
-                        li
-                            a(href="#home")
-                                | Home
-                        li
-                            a(href="#about")
-                                | About
-                        li.active
-                            a(href="#services")
-                                | Services
-//-- newsletter area
-section#newsletter
-    div.container
+extends ../layout
 
-        h1
-            | Subscribe to our newsletter
+block pageHeader
 
-        form
-            input(type="email", placeholder="Enter Email...")
-            button.button_1(type="submit")
-                | Subscribe
+    //-- services section content
+    header#home
+                div.container
+                
+                    div#branding
+                        h1 
+                            | Mock
+                            span UI
+                    nav
+                        ul
+                            li
+                                a(href="/home")
+                                    | Home
+                            li
+                                a(href="/about")
+                                    | About
+                            li.active
+                                a(href="/services")
+                                    | Services
+    //-- newsletter area
+    section#newsletter
+        div.container
 
-//-- boxes section
-section#main
-    div.container
+            h1
+                | Subscribe to our newsletter
 
-        article#main-col
-            h1.page-title
-                | Services
-            
-            ul#services
-                li
+            form
+                input(type="email", placeholder="Enter Email...")
+                button.button_1(type="submit")
+                    | Subscribe
+
+block pageContent
+
+    //-- boxes section
+    section#main
+        div.container
+
+            article#main-col
+                h1.page-title
+                    | Services
+                
+                ul#services
+                    li
+                        h3
+                            | Website design
+                        p
+                            | Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tristique suscipit tellus, id feugiat libero pulvinar at.
+                        p
+                            | Pricing: 1.000 - 3.000
+
+                    li
+                        h3
+                            | Website maintenance
+                        p
+                            | Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tristique suscipit tellus, id feugiat libero pulvinar at.
+                        p
+                            | Pricing: 250 per month
+
+                    li
+                        h3
+                            | Website hosting
+                        p
+                            | Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tristique suscipit tellus, id feugiat libero pulvinar at.
+                        p
+                            | Pricing: 25 per month
+
+            aside#sidebar
+                div.dark.rounded
                     h3
-                        | Website design
-                    p
-                        | Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tristique suscipit tellus, id feugiat libero pulvinar at.
-                    p
-                        | Pricing: 1.000 - 3.000
+                        | Get a Quote
 
-                li
-                    h3
-                        | Website maintenance
-                    p
-                        | Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tristique suscipit tellus, id feugiat libero pulvinar at.
-                    p
-                        | Pricing: 250 per month
+                    form.quote
+                        
+                        div
+                            label Name
+                            br
+                            input(type="text", placeholder="Name")
 
-                li
-                    h3
-                        | Website hosting
-                    p
-                        | Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tristique suscipit tellus, id feugiat libero pulvinar at.
-                    p
-                        | Pricing: 25 per month
+                        div
+                            label Email
+                            br
+                            input(type="email", placeholder="Email Address")
 
-        aside#sidebar
-            div.dark.rounded
-                h3
-                    | Get a Quote
+                        div
+                            label Message
+                            br
+                            textarea(placeholder="Message")
 
-                form.quote
-                    
-                    div
-                        label Name
-                        br
-                        input(type="text", placeholder="Name")
-
-                    div
-                        label Email
-                        br
-                        input(type="email", placeholder="Email Address")
-
-                    div
-                        label Message
-                        br
-                        textarea(placeholder="Message")
-
-                    button.button_1(type="submit")
-                        | Send
+                        button.button_1(type="submit")
+                            | Send

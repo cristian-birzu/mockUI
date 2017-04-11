@@ -1,65 +1,69 @@
 
+extends ../layout
+
 //-- home section content
-header
-    div.container
-    
-        div#branding
-            h1 Mock
-                span UI
-        nav
-            ul
-                li.active
-                    a(href="#home")
-                        | Home
-                li
-                    a(href="#about")
-                        | About
-                li
-                    a(href="#services")
-                        | Services
-//-- showcase area
-section#showcase
-    div.container
+block pageHeader
+    header
+        div.container
+        
+            div#branding
+                h1 Mock
+                    span UI
+            nav
+                ul
+                    li.active
+                        a(href="home")
+                            | Home
+                    li
+                        a(href="about")
+                            | About
+                    li
+                        a(href="services")
+                            | Services
+    //-- showcase area
+    section#showcase
+        div.container
 
-        h1
-            | Static responsive website
-        p
-            | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed blandit odio, eu varius quam. Maecenas lobortis elementum lorem ut tempor. Nam pulvinar non odio ut dignissim.
-
-
-//-- newsletter area
-section#newsletter
-    div.container
-
-        h1
-            | Subscribe to our newsletter
-
-        form
-            input(type="email", placeholder="Enter Email...")
-            button.button_1(type="submit")
-                | Subscribe
-
-//-- boxes section
-section#boxes
-    div.container
-
-        div.box
-            img(src="./img/logo_html.png")
-            h3
-                | HTML 5 Markup
+            h1
+                | Static responsive website
             p
-                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed blandit odio, eu varius quam. Maecenas lobortis elementum lorem ut tempor. Nam pulvinar non odio ut dignissim.
 
-        div.box
-            img(src="./img/logo_css.png")
-            h3
-                | CSS3 Styling
-            p
-                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            
-        div.box
-            img(src="./img/logo_brush.png")
-            h3
-                | Graphic Desingn
-            p
-                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    //-- newsletter area
+    section#newsletter
+        div.container
+
+            h1
+                | Subscribe to our newsletter
+
+            form
+                input(type="email", placeholder="Enter Email...")
+                button.button_1(type="submit")
+                    | Subscribe
+
+block pageContent
+
+    //-- boxes section
+    section#boxes
+        div.container
+
+            div.box
+                img(src="./img/logo_html.png")
+                h3
+                    | HTML 5 Markup
+                p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+            div.box
+                img(src="./img/logo_css.png")
+                h3
+                    | CSS3 Styling
+                p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                
+            div.box
+                img(src="./img/logo_brush.png")
+                h3
+                    | Graphic Desingn
+                p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
