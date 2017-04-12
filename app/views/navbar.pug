@@ -1,0 +1,17 @@
+
+//-- menuItem mixin
+mixin menuItem(url, view)
+            
+    if url === view
+        li.active
+            a(href= url) #{url}
+    else
+        li
+            a(href= url) #{url}
+ 
+//-- website navbar
+nav
+    ul
+        +menuItem('home', view)
+        +menuItem('about', view)
+        +menuItem('services', view)

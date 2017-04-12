@@ -1,17 +1,8 @@
 
+
 //-- condition to display the showcase section
 - let hideShowcase = !(view === 'home')
 
-//-- menuItem mixin
-mixin menuItem(url, view)
-            
-    if url === view
-        li.active
-            a(href= url) #{url}
-    else
-        li
-            a(href= url) #{url}
-                
 doctype html
 html
     head
@@ -36,17 +27,11 @@ html
                 div#branding
                     h1 Mock
                         span UI
-                nav
-                    ul
-                        +menuItem('home', view)
-                        +menuItem('about', view)
-                        +menuItem('services', view)
+                
+                include views/navbar
                         
         //-- showcase area
-        if !hideShowcase
-            section#showcase
-        else
-            section#showcase(style="display: none;")
+        section#showcase(style=hideShowcase ? "display: none;" : "")
 
                 div.container
 
@@ -67,23 +52,11 @@ html
                     button.button_1(type="submit")
                         | Subscribe
 
-
         //-- page content
         section.page-section
             block pageContent
 
-        //-- includes the home section
-        //--section#home.page-section
-            include views/home.pug
-    
-        //-- includes the about section
-        //--section#about.page-section
-            include views/about.pug
-            
-        //-- includes the services section
-        //--section#services.page-section
-            include views/services.pug
-            
+        //-- page footer
         footer
             p
                 | MockUI, Copyright &copy; 2017
